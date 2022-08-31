@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Todo;
 use Illuminate\Http\Request;
+use Psy\Readline\Hoa\Console;
 
 class todoControllar extends Controller
 {
@@ -48,6 +49,7 @@ class todoControllar extends Controller
         $todo = new Todo;
         $todo->todo = $request->newItem;
         $todo->save();
+        // echo ('saved');
         return redirect()->back();
     }
 }
